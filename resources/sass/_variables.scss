@@ -1,20 +1,51 @@
 
 // Body
-$body-bg: #f8fafc;
+$body-bg: #FFFFFF;
 
 // Typography
-$font-family-sans-serif: "Nunito", sans-serif;
+$font-family-sans-serif: "Vollkorn", serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66D9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$black: #22292f;
+$grey-darkest: #3d4852;
+$grey-darker: #606f7b;
+$grey-dark: #8795a1;
+$grey: #b8c2cc;
+$grey-light: #dae1e7;
+$grey-lighter: #f1f5f8;
+$grey-lightest: #f8fafc;
+$white: #ffffff;
+$yellow: #f0af41;
+$red: #f5222d;
+$blue: #1890ff;
+$purple: #ae28e2;
+$green: #52c41a;
+
+$colors: (
+  "black": $black,
+  "grey-darkest": $grey-darkest,
+  "grey-darker": $grey-darker,
+  "grey-dark": $grey-dark,
+  "grey": $grey,
+  "grey-light": $grey-light,
+  "grey-lighter": $grey-lighter,
+  "grey-lightest": $grey-lightest,
+  "white": $white,
+  "yellow": $yellow,
+  "red": $red,
+  "blue": $blue,
+  "purple": $purple,
+  "green": $green
+) !default;
+
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: #{$value};
+  }
+
+  .bg-#{$color} {
+    background-color: #{$value};
+  }
+}

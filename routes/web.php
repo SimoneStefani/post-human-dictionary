@@ -11,6 +11,15 @@
 |
 */
 
+use Wink\WinkPost;
+
 Route::get('/', function () {
-    return view('welcome');
+    $posts = WinkPost::with('tags')
+        ->live()
+        ->orderBy('publish_date', 'DESC')
+        ->simplePaginate(12);
+
+    return view('landing', [
+        'posts' => $posts
+    ]);
 });
