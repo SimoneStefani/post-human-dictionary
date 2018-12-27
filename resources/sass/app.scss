@@ -8,8 +8,22 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+p {
+  font-size: 1rem !important;
+}
+
 .heading-wrapper {
   height: 100vh;
   background-size: auto 100%;
   background-position: center center;
+}
+
+.toc-link {
+  text-decoration: none;
+  color: $grey-darkest;
+
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    color: $grey-dark;
+  }
 }

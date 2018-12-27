@@ -10610,9 +10610,25 @@ a.text-dark:focus {
   }
 }
 
+p {
+  font-size: 1rem !important;
+}
+
 .heading-wrapper {
   height: 100vh;
   background-size: auto 100%;
   background-position: center center;
+}
+
+.toc-link {
+  text-decoration: none;
+  color: #3d4852;
+}
+
+.toc-link:hover,
+.toc-link:focus,
+.toc-link:active {
+  text-decoration: none;
+  color: #8795a1;
 }
 
